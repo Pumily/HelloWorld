@@ -1,50 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    >
 
+    <!--start-线性布局练习代码-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll-1"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:orientation="vertical"-->
+        <!--android:background="#000000"-->
+        <!--android:paddingLeft="20dp"-->
+        <!--android:paddingRight="20dp"-->
+        <!--android:paddingTop="50dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:layout_marginBottom="20dp">-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#ff0033"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:background="#0066ff"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp">-->
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#000000"-->
+            <!--android:layout_weight="1"></View>-->
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#ff0033"-->
+            <!--android:layout_weight="2"></View>-->
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#55aa99"-->
+            <!--android:layout_weight="2"></View>-->
+    <!--</LinearLayout>-->
+    <!--end-线性布局练习代码-->
+
+    <!--start-相对布局练习代码-->
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#000000"></View>
+    
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#ff0033"
+        android:layout_below="@+id/view_1"></View>
+    
     <LinearLayout
-        android:id="@+id/ll-1"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:background="#000000"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="50dp"
-        android:paddingBottom="10dp"
-        android:layout_marginBottom="20dp">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ff0033"/>
-    </LinearLayout>
-
-    <LinearLayout
+        android:id="@+id/ll_1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/view_2"
         android:background="#0066ff"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
+        android:padding="15dp">
+        
         <View
-            android:layout_width="0dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#ff0033"></View>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#000000"
-            android:layout_weight="1"></View>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:background="#ff0033"
-            android:layout_weight="2"></View>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:background="#55aa99"
-            android:layout_weight="2"></View>
+            android:padding="15dp">
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#ff9900"></View>
+
+            <View
+                android:id="@+id/view_4"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#ff9900"
+                android:layout_toRightOf="@id/view_3"
+                android:layout_marginLeft="10dp"></View>
+        </RelativeLayout>
     </LinearLayout>
-</LinearLayout>
+    <!--end-相对布局练习代码-->
+</RelativeLayout>
