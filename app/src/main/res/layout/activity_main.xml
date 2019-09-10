@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll-1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff0033"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#0066ff"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:layout_weight="1"></View>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#ff0033"
+            android:layout_weight="2"></View>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#55aa99"
+            android:layout_weight="2"></View>
+    </LinearLayout>
+</LinearLayout>
