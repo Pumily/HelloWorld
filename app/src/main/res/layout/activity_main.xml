@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15dp"
     >
 
     <!--start-线性布局练习代码-->
@@ -105,5 +106,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"/>
+
+    <Button
+        android:id="@+id/btn_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"/>
     <!--end-TextView练习代码-->
 </LinearLayout>

@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button mBtnTextView;
+    private Button mBtnButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //跳转到TextView演示页面
                 Intent intent = new Intent(MainActivity.this,TextViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnButton = findViewById(R.id.btn_button);
+        mBtnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //跳转到Button演示页面
+                Intent intent = new Intent(MainActivity.this,ButtonActivity.class);
                 startActivity(intent);
             }
         });
